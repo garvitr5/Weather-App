@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #213c95 0%, #546072 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.weatherForm {
+    margin: 40px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cityInput {
+    padding: 12px 20px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    margin-bottom: 10px;
+    width: 280px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.cityInput:focus {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+button[type="submit"] {
+    padding: 10px 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #28c76f;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #20b65c;
+}
+
+.card {
+    background: white;
+    padding: 40px 60px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cityDisplay {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.tempDisplay {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #ff5733;
+    margin-bottom: 10px;
+}
+
+.humidityDisplay, .descDisplay {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.weatherEmoji {
+    font-size: 6rem;
+    margin: 10px 0;
+}
+
+.errorDisplay {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff0000;
+    text-align: center;
+}
